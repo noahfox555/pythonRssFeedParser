@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<img class = 'sadFace' src="{{ url_for('static', filename='sad_face_error.png') }}"  alt="Sad face">
+<br>
+<h2 class = 'linkErrorMessage'>The entered RSS feed link could not be read. The site may be down or 
+    the link may be incorrect. Please try a different RSS feed link.</h2>
+{% endblock %}

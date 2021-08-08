@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>RSS Feed Searcher</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body { 
+            background: #7393B3 !important; 
+            font-family:Georgia, 'Times New Roman', Times, serif !important;
+        }
+
+        table {
+            max-width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+
+        .sorryMessage, .linkErrorMessage, .sadFace, .header {
+            padding-top: 20px;
+            padding-bottom: 10px;
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 50%
+        }
+
+        .form, .searchResults {
+            text-align: center;
+            padding-bottom: 10px;
+        }        
+
+        .submitButton {
+            background-color: dodgerblue;
+            font: bold 15px arial, sans-serif;
+            color: white;
+            border-color: #0066A2;
+            height: 40px;
+            border-radius: 3px;
+        }
+
+        .searchBox {
+            width: 300px;
+            border-radius: 3px;
+            height: 40px;
+            font-size: larger;
+        }
+
+    </style>
+
+    <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+</head>
+
+<body>
+    <h1 class='header'>RSS Reader<span font-color="red">
+        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Enter your favorite rss feeds. Filter the search results by entering a search phrase.">🛈</button></span></h1>
+    <!-- tooltip -->
+ 
+    <form action="/" , method="post" , class='form'>
+        <input type='text' placeholder='RSS Feed URL' name='RSSFeed' class='searchBox'>
+        <input type='text' placeholder='Search Phrase' name='searchPhrase' class='searchBox'>
+        <input type='Submit' name='submit' class='submitButton'>
+    </form>
+
+    <br>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

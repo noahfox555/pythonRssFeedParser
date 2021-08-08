@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<img class = 'sadFace' src="{{ url_for('static', filename='sad_face_error.png') }}"  alt="Sad face">
+<br>
+<h3 class = 'sorryMessage'>Sorry! Unable to find articles from <a href = "{{ RSSFeed }}" target="_blank" rel="noopener noreferrer">{{ RSSFeed }}</a>, this may not be an RSS feed.</h3>
+{% endblock %}
