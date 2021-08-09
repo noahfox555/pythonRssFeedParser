@@ -1,3 +1,4 @@
+# pythonRssFeedParser
 This web application is an RSS feed parser made in Python. The user of this application can enter the link to an RSS feed and a search phrase and will be presented with all the articles from the RSS feed related to that search phrase. 
 
 I created this project becuase I am very interested in the New York Yankees. I wanted a way where I could stay caught up on all the latest Yankees news from ESPN. I started off by making a python application where the user could enter the RSS feed and search phrase in the terminal. I then deicded I could make the application more user friendly with a website where the user could enter any RSS feed and filter the results with a search phrase.
